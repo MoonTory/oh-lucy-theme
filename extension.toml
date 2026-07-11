@@ -1,0 +1,7 @@
+id = "oh-lucy"
+name = "Oh Lucy"
+version = "0.1.0"
+schema_version = 1
+authors = ["Gustavo Quinta <gustavoqnt40@gmail.com>"]
+description = "A faithful port of the Oh Lucy VSCode theme by hermitter, with the Oh Lucy, Lucy, and Lucy Evening variants."
+repository = "https://github.com/gustavo-quinta/zed-lucy"
