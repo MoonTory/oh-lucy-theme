@@ -13,8 +13,8 @@ MAPPING NOTES
 - VSCode distinguishes the active tab with a yellow top border + yellow text;
   Zed has no per-tab text/border colors, so tabs rely on Zed's built-in
   text vs text.muted distinction (backgrounds stay faithful).
-- Scrollbars are not themed by the original (VSCode defaults); we use the
-  theme's translucent whites, consistent with its hover/selection overlays.
+- Zed panels (project/git/outline docks) map to VSCode's sideBar, not
+  VSCode's bottom panel: they are the file-tree surfaces of the original.
 - Zed's `created`/`modified`/`deleted` statuses follow the original's gutter
   colors (added=green, modified=orange, deleted=pink). Note the original's
   file-tree colors disagree with its own gutter (modified files are green);
@@ -112,16 +112,20 @@ def build_variant(vscode: dict, name: str) -> dict:
         "icon.disabled": c["sideBarTitle.foreground"],
         "icon.placeholder": c["input.placeholderForeground"],
         "icon.accent": accent,
-        "link_text.hover": c["editorLink.activeForeground"],
+        "link_text.hover": c.get(
+            "textLink.activeForeground", c["editorLink.activeForeground"]
+        ),
         # Panels / panes
         "pane_group.border": c["editorGroup.border"],
+        "pane.focused_border": c["focusBorder"],
         "panel.focused_border": c["focusBorder"],
         "panel.indent_guide": c["editorIndentGuide.background"],
         "panel.indent_guide_active": c["editorRuler.foreground"],
         "panel.indent_guide_hover": c["editorRuler.foreground"],
-        # Scrollbar (unthemed in the original; translucent whites match its overlays)
-        "scrollbar.thumb.background": faint_wash,
-        "scrollbar.thumb.hover_background": strong_wash,
+        "scrollbar.thumb.background": c.get("scrollbarSlider.background", faint_wash),
+        "scrollbar.thumb.hover_background": c.get(
+            "scrollbarSlider.hoverBackground", strong_wash
+        ),
         "scrollbar.thumb.border": TRANSPARENT,
         "scrollbar.track.background": TRANSPARENT,
         "scrollbar.track.border": TRANSPARENT,
@@ -150,7 +154,7 @@ def build_variant(vscode: dict, name: str) -> dict:
         "editor.document_highlight.write_background": c["editor.wordHighlightStrongBackground"],
         "editor.document_highlight.bracket_background": faint_wash,
         "editor.subheader.background": c["editorGroupHeader.tabsBackground"],
-        "search.match_background": c["editor.findMatchHighlightBackground"],
+        "search.match_background": c["editor.findMatchBackground"],
         # Status colors
         "error": c["editorError.foreground"],
         "error.background": c["inputValidation.errorBackground"],
@@ -181,7 +185,7 @@ def build_variant(vscode: dict, name: str) -> dict:
         # Terminal (the original renders it on the VSCode panel background)
         "terminal.background": c["panel.background"],
         "terminal.foreground": c["editor.foreground"],
-        "terminal.bright_foreground": scope("region.whitish")["foreground"],
+        "terminal.bright_foreground": c["terminal.ansiBrightWhite"],
         "terminal.dim_foreground": c["terminal.ansiBrightBlack"],
         "terminal.ansi.black": c["terminal.ansiBlack"],
         "terminal.ansi.red": c["terminal.ansiRed"],
@@ -225,7 +229,7 @@ def build_variant(vscode: dict, name: str) -> dict:
             "comment.doc": syn("comment"),
             "constant": syn("constant"),
             "constructor": syn("meta.instance.constructor"),
-            "embedded": syn("punctuation.section.embedded"),
+            "embedded": syn("string source"),
             "emphasis": {"font_style": "italic"},
             "emphasis.strong": {"font_weight": 700},
             "enum": syn("constant"),
@@ -265,6 +269,7 @@ def build_variant(vscode: dict, name: str) -> dict:
             "title": syn("markup.heading"),
             "type": syn("entity.name.class"),
             "variable": syn("variable"),
+            "variable.parameter": syn("variable.parameter"),
             "variable.special": syn("variable.language"),
             "variant": syn("constant"),
             "diff.plus": syn("markup.inserted"),
