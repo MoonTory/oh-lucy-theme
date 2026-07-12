@@ -15,13 +15,13 @@ Four variants are included:
 ![Lucy](assets/lucy-zed.png)
 
 <!-- SCREENSHOT: same file with the "Lucy Evening" theme. Save as assets/lucy-evening-zed.png -->
-![Lucy Evening](assets/lucy-evening-zed.png)
+![Lucy Evening](assets/lucy-evening.png)
 
 <!-- SCREENSHOT: same file with the "Lucy Dawn" theme. Save as assets/lucy-dawn-zed.png -->
-![Lucy Dawn](assets/lucy-dawn-zed.png)
+![Lucy Dawn](assets/lucy-dawn.png)
 
 <!-- SCREENSHOT: same file with the "Lucy Midnight" theme. Save as assets/lucy-midnight-zed.png -->
-![Lucy Midnight](assets/lucy-midnight-zed.png)
+![Lucy Midnight](assets/lucy-midnight.png)
 
 The screenshots show [`examples/example.ts`](examples/example.ts), a small file that touches the theme's signature tokens: italic cyan declaration keywords, purple constants, green types and function calls, pink keywords, and yellow strings.
 
@@ -69,6 +69,6 @@ Two things worth knowing:
 ## Credits
 
 - [Juliette Prétot](https://github.com/jul-sh) created the original [Lucy theme](https://github.com/jul-sh/lucy-vscode-theme).
-- [hermitter](https://github.com/hermitter) maintains the [Oh Lucy re-upload](https://github.com/hermitter/oh-lucy-vscode-theme) this port was built from, and this extension keeps that name in tribute.
+- [hermitter](https://github.com/hermitter) maintains the [Oh Lucy re-upload](https://github.com/hermitter/oh-lucy-vscode-theme) this port was built from.
 
 Licensed MIT, preserving the original copyright.
