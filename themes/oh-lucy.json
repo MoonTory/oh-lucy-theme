@@ -215,6 +215,10 @@
           "keyword": {
             "color": "#fb7da7"
           },
+          "keyword.declaration": {
+            "color": "#51c7da",
+            "font_style": "italic"
+          },
           "label": {
             "color": "#d7d7d7"
           },
@@ -286,7 +290,7 @@
             "color": "#51c7da"
           },
           "variable": {
-            "color": "#d7d7d7"
+            "color": "#af98e6"
           },
           "variable.parameter": {
             "color": "#fdad5d",
@@ -519,6 +523,10 @@
           "keyword": {
             "color": "#fb7da7"
           },
+          "keyword.declaration": {
+            "color": "#51c7da",
+            "font_style": "italic"
+          },
           "label": {
             "color": "#d7d7d7"
           },
@@ -590,7 +598,7 @@
             "color": "#51c7da"
           },
           "variable": {
-            "color": "#d7d7d7"
+            "color": "#af98e6"
           },
           "variable.parameter": {
             "color": "#fdad5d",
@@ -823,6 +831,10 @@
           "keyword": {
             "color": "#ff7da3"
           },
+          "keyword.declaration": {
+            "color": "#56c6d5",
+            "font_style": "italic"
+          },
           "label": {
             "color": "#ded7d0"
           },
@@ -894,7 +906,7 @@
             "color": "#56c6d5"
           },
           "variable": {
-            "color": "#ded7d0"
+            "color": "#b898dd"
           },
           "variable.parameter": {
             "color": "#ffac5c",

@@ -16,14 +16,13 @@ Includes all three variants of the original extension:
 
 ## Development
 
-The theme is **generated**, not hand-written. The original theme is cloned into `reference/oh-lucy-vscode-theme` (git-ignored) and its built `dist/*.json` files are the source of truth:
+`themes/oh-lucy.json` is maintained by hand. The initial version was generated from the original theme's built JSONs by `notes/build_themes.py` (retired — do not rerun; the theme has hand adjustments on top). To compare against the source of truth, clone the original into `reference/`:
 
 ```sh
 git clone https://github.com/hermitter/oh-lucy-vscode-theme reference/oh-lucy-vscode-theme
-python3 scripts/build_themes.py   # regenerates themes/oh-lucy.json
 ```
 
-`notes/` contains the research used for the port: the Zed theme format reference (`zed-theme-format.md`) and the extracted color data of the original (`extracted/`).
+`notes/` contains the research used for the port: the Zed theme format reference (`zed-theme-format.md`), Zed's JS/TS highlight captures (`zed-js-captures.md`), and the extracted color data of the original (`extracted/`).
 
 ## Porting notes
 
@@ -33,3 +32,5 @@ Zed's theme model differs from VSCode's (tree-sitter captures instead of TextMat
 - Active tabs keep the original backgrounds but rely on Zed's text/muted-text distinction (Zed has no per-tab border/text colors).
 - Inlay hints use the original's dim `editorInlayHint` gray rather than the purple `editorHint` diagnostic color.
 - Scrollbars, collaboration players, and UI accents are not themed in the original; they are built from the theme's own palette.
+- `const`/`let`/`function`/`class` keywords use Zed's `keyword.declaration` capture, matching the original's italic-cyan `storage.type`.
+- Zed captures every identifier as `variable` (declarations and usages alike), so variables use the original's const-name purple everywhere; the original could keep usages white because TextMate distinguishes `variable.other.constant`.

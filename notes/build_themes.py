@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Generate the Zed theme family from the original Oh Lucy VSCode theme.
+"""RETIRED: generated the initial themes/oh-lucy.json; kept for provenance.
+
+themes/oh-lucy.json is now maintained by hand (it has diverged: syntax
+`keyword.declaration` and the purple `variable` color were added after
+comparing against the original in VSCode). Do NOT rerun this script — it
+would overwrite those adjustments.
+
+Original description follows.
+
+Generate the Zed theme family from the original Oh Lucy VSCode theme.
 
 Reads the built VSCode themes in reference/oh-lucy-vscode-theme/dist/ and
 emits themes/oh-lucy.json (Zed theme schema v0.2.0). All colors come from the
