@@ -1,3 +1,5 @@
 /reference/
 .DS_Store
 .claude
+.agents
+node_modules
