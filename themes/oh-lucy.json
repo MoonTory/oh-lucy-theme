@@ -290,7 +290,7 @@
             "color": "#51c7da"
           },
           "variable": {
-            "color": "#c3b5d3"
+            "color": "#d7d7d7"
           },
           "variable.parameter": {
             "color": "#fdad5d",
@@ -598,7 +598,7 @@
             "color": "#51c7da"
           },
           "variable": {
-            "color": "#c3b5d3"
+            "color": "#d7d7d7"
           },
           "variable.parameter": {
             "color": "#fdad5d",
@@ -906,7 +906,7 @@
             "color": "#56c6d5"
           },
           "variable": {
-            "color": "#ccb5ca"
+            "color": "#ded7d0"
           },
           "variable.parameter": {
             "color": "#ffac5c",

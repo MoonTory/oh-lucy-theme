@@ -24,6 +24,27 @@ git clone https://github.com/hermitter/oh-lucy-vscode-theme reference/oh-lucy-vs
 
 `notes/` contains the research used for the port: the Zed theme format reference (`zed-theme-format.md`), Zed's JS/TS highlight captures (`zed-js-captures.md`), and the extracted color data of the original (`extracted/`).
 
+## Optional: original const-declaration purple
+
+The original colors a `const`-declared name purple (`variable.other.constant`) while usages stay white. Zed's tree-sitter captures can't distinguish the two, but its LSP semantic tokens can — the TypeScript server marks declaration names with `declaration` + `readonly`. Add this to your Zed `settings.json` to reproduce the original exactly:
+
+```json
+{
+  "semantic_tokens": "combined",
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      {
+        "token_type": "variable",
+        "token_modifiers": ["declaration", "readonly"],
+        "style": ["constant"]
+      }
+    ]
+  }
+}
+```
+
+Restart the language server (`editor: restart language server`) after changing it. Without this, const declarations render white like other variables. See `notes/zed-query-override.md` for the research behind this.
+
 ## Porting notes
 
 Zed's theme model differs from VSCode's (tree-sitter captures instead of TextMate scopes, different UI keys), so a few deliberate mapping decisions were made — all documented in `scripts/build_themes.py`:
