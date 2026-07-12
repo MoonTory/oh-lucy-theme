@@ -54,4 +54,5 @@ Zed's theme model differs from VSCode's (tree-sitter captures instead of TextMat
 - Inlay hints use the original's dim `editorInlayHint` gray rather than the purple `editorHint` diagnostic color.
 - Scrollbars, collaboration players, and UI accents are not themed in the original; they are built from the theme's own palette.
 - `const`/`let`/`function`/`class` keywords use Zed's `keyword.declaration` capture, matching the original's italic-cyan `storage.type`.
+- Zed's `type` capture uses the default foreground: the original's cyan targets `entity.name.class`/`support.class`, scopes modern grammars rarely emit — class/type names (`Error`, `Partial`, custom classes) actually render plain in the original.
 - Zed captures every identifier as `variable` (declarations and usages alike), while the original colors only const-declared names purple (TextMate's `variable.other.constant`) and keeps usages white. As a middle ground, variables use the theme's soft lavender everywhere.
