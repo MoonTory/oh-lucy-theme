@@ -14,22 +14,24 @@ Five variants are included:
 
 The four dark variants at a glance:
 
-<!-- The composite is generated from the dark variants' full-size screenshots below. -->
-![Oh Lucy theme variants: Lucy, Evening, Dawn, and Midnight](assets/oh-lucy-variants-v2.png)
-
 <details>
 <summary>Full-size screenshots</summary>
 
 <br>
 
-![Lucy](assets/lucy-zed.png)
+### Lucy
+![Lucy](assets/lucy.png)
 
+### Lucy Evening
 ![Lucy Evening](assets/lucy-evening.png)
 
+### Lucy Dawn
 ![Lucy Dawn](assets/lucy-dawn.png)
 
+### Lucy Midnight
 ![Lucy Midnight](assets/lucy-midnight.png)
 
+### Lucy Day
 ![Lucy Day](assets/lucy-day.png)
 
 </details>
@@ -66,10 +68,12 @@ One of Lucy's nicest touches is that a `const` name is purple where it's declare
 }
 ```
 
-<!-- SCREENSHOT: examples/example.ts with the semantic token settings applied (const names purple at declaration). Save as assets/semantic-on.png -->
+### Semantic tokens
+#### With semantic tokens
 ![With semantic tokens](assets/semantic-on.png)
 
-<!-- SCREENSHOT: the same file without the settings (const names plain white). Save as assets/semantic-off.png -->
+
+#### Without semantic tokens
 ![Without semantic tokens](assets/semantic-off.png)
 
 Two things worth knowing:
