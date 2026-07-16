@@ -36,7 +36,7 @@ The four dark variants at a glance:
 
 </details>
 
-The screenshots show [`examples/example.ts`](examples/example.ts), a small file that touches the theme's signature tokens: italic cyan declaration keywords, purple constants, green types and function calls, pink keywords, and yellow strings.
+The screenshots show a small TypeScript file that touches the theme's signature tokens: italic cyan declaration keywords, purple constants, green types and function calls, pink keywords, and yellow strings.
 
 ## Installation
 
