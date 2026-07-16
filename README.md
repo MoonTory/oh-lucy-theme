@@ -1,33 +1,44 @@
-# Oh Lucy for Zed
+# Oh Lucy Theme for Zed
 
-Lucy is a soft but clear dark theme that has passed through a few caring hands. [Juliette Prétot](https://github.com/jul-sh) knitted the [original Lucy](https://github.com/jul-sh/lucy-vscode-theme) for VSCode, [hermitter](https://github.com/hermitter) gave it a second home under the name [Oh Lucy](https://github.com/hermitter/oh-lucy-vscode-theme), and this project carries it, color by color, to [Zed](https://zed.dev). The palette's charm is all theirs. The porting mistakes are ours.
+Lucy is a soft but clear dark theme that has passed through a few caring hands. [Juliette Prétot](https://github.com/jul-sh) knitted the [original Lucy](https://github.com/jul-sh/lucy-vscode-theme) for VS Code, [hermitter](https://github.com/hermitter) gave it a second home under the name [Oh Lucy](https://github.com/hermitter/oh-lucy-vscode-theme), and this project carries it, color by color, to [Zed](https://zed.dev). This collection focuses on a faithful port of the originals and expands the palette with Dawn, Midnight, and Day variants.
 
-Four variants are included:
+Five variants are included:
 
 - **Lucy**: the original theme
 - **Lucy Evening**: the original's warmer evening companion
 - **Lucy Dawn**: new in this port, the same palette under a cool pre-dawn light
 - **Lucy Midnight**: new in this port, deeper and darker for late nights
+- **Lucy Day**: new in this port, and the first light Lucy anywhere. The same hues, deepened until they read comfortably on a pale lavender-gray page
 
 ## Screenshots
 
-<!-- SCREENSHOT: open examples/example.ts in Zed with the "Lucy" theme, capture the editor. Save as assets/lucy-zed.png -->
+The four dark variants at a glance:
+
+<!-- The composite is generated from the dark variants' full-size screenshots below. -->
+![Oh Lucy theme variants: Lucy, Evening, Dawn, and Midnight](assets/oh-lucy-variants-v2.png)
+
+<details>
+<summary>Full-size screenshots</summary>
+
+<br>
+
 ![Lucy](assets/lucy-zed.png)
 
-<!-- SCREENSHOT: same file with the "Lucy Evening" theme. Save as assets/lucy-evening-zed.png -->
 ![Lucy Evening](assets/lucy-evening.png)
 
-<!-- SCREENSHOT: same file with the "Lucy Dawn" theme. Save as assets/lucy-dawn-zed.png -->
 ![Lucy Dawn](assets/lucy-dawn.png)
 
-<!-- SCREENSHOT: same file with the "Lucy Midnight" theme. Save as assets/lucy-midnight-zed.png -->
 ![Lucy Midnight](assets/lucy-midnight.png)
+
+![Lucy Day](assets/lucy-day.png)
+
+</details>
 
 The screenshots show [`examples/example.ts`](examples/example.ts), a small file that touches the theme's signature tokens: italic cyan declaration keywords, purple constants, green types and function calls, pink keywords, and yellow strings.
 
 ## Installation
 
-Until the extension lands on the Zed registry, install it as a dev extension:
+Until the extension is on the Zed registry, install it as a dev extension:
 
 1. Clone this repo.
 2. In Zed, run `zed: install dev extension` from the command palette and pick the repo's root directory.

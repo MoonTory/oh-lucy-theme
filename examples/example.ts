@@ -25,4 +25,5 @@ class AccountStore {
 const account = await AccountStore.findOne(42);
 const greeting = `Welcome to ${account.name}! Comments are soft, dim, and italic.`;
 
-export const stored = inspect(greeting, { colors: true }); // Welcome to Lucy Zed! Comments are soft, dim, and italic.
+// Welcome to Lucy Zed! Comments are soft, dim, and italic.
+export const stored = inspect(greeting, { colors: true });
